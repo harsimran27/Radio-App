@@ -1,5 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
+}
+
+body {
+  font-family: "Architects Daughter", cursive;
+  background-color: #282c34;
+  background: rgb(40, 31, 53);
+  background: linear-gradient(to right, rgb(40, 31, 53), rgb(61, 46, 83));
+
+  color: #e40017;
+  color: #e36bae;
+  color: #fb743e;
+  color: rgb(235, 235, 235);
 }
 
 .App-logo {

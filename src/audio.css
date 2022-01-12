@@ -1,0 +1,79 @@
+.filters > span {
+  margin: 10px;
+  border: 1px solid white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.stationName img {
+  display: block;
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 50%;
+  border: 2px solid rgb(76, 62, 95);
+  margin: 0 0.25em;
+}
+
+.filters {
+  margin: 30px;
+}
+
+.radio {
+  display: flex;
+}
+
+.stations {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: auto;
+  width: 80%;
+}
+
+.station {
+  margin: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid rgb(216, 216, 216);
+  border-radius: 10px;
+  width: 20%;
+  height: 30%;
+}
+
+.stationName {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.stationName > img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  display: flex;
+  justify-content: center;
+}
+
+.selected {
+  background: linear-gradient(to bottom right, #e36bae, #fb743e);
+  cursor: pointer;
+}
+
+.notSeleted:hover {
+  background: linear-gradient(to bottom right, #e36bae, #fb743e);
+  cursor: pointer;
+}
+
+.station:hover {
+  border-color: #e36bae;
+}
+
+.station .player {
+  background-color: rgb(76, 62, 95);
+}

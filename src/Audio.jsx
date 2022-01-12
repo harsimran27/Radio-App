@@ -1,11 +1,12 @@
 import React from "react";
-import "./radio.css";
+import "./audio.css";
 import { useState, useEffect } from "react";
 import defaultImage from "./radioImg.jpg";
 import { RadioBrowserApi } from "radio-browser-api";
-import AudioPlayer from "radio-browser-api";
+import AudioPlayer from "react-h5-audio-player";
+import "react-h5-audio-player/lib/styles.css";
 
-const Radio = () => {
+const Audio = () => {
   const [stations, setStations] = useState();
   const [stationFilter, setStationFilter] = useState("all");
 
@@ -60,7 +61,7 @@ const Radio = () => {
             {filter}
           </span>
         ))}
-        <div className="station">
+        <div className="stations">
           {stations &&
             stations.map((station, index) => {
               return (
@@ -72,7 +73,17 @@ const Radio = () => {
                       alt="station"
                       onError={setDefaultSrc}
                     />
+                    <div className="songName">{station.name}</div>
                   </div>
+                  <AudioPlayer
+                    className="player"
+                    src={station.urlResolved}
+                    showJumpControls={false}
+                    layout="stacked"
+                    customProgressBarSection={[]}
+                    customControlsSection={["MAIN_CONTROLS", "VOLUME_CONTROLS"]}
+                    autoPLayAfterSrcChange={false}
+                  />
                 </div>
               );
             })}
@@ -82,4 +93,4 @@ const Radio = () => {
   );
 };
 
-export default Radio;
+export default Audio;
